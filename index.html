@@ -28,9 +28,11 @@
                 <div class="hidden lg:flex space-x-6 text-sm font-medium text-gray-600">
                     <a href="#overview" class="hover:text-orange-600 transition">Overview</a>
                     <a href="#endpoint" class="hover:text-orange-600 transition">Geocoding API</a>
-                    <a href="#reference-api" class="hover:text-orange-600 transition">Reference API</a>
+                    <a href="#integration-flow" class="hover:text-orange-600 transition">Integration Flow</a>
                     <a href="#database" class="hover:text-orange-600 transition">Database</a>
+                    <a href="#reference-api" class="hover:text-orange-600 transition">Reference API</a>
                     <a href="#snippets" class="hover:text-orange-600 transition">Code</a>
+                    <a href="use-cases.html" class="hover:text-orange-600 transition font-semibold text-orange-600">Use Cases 🚀</a>
                 </div>
 
                 <div class="flex items-center space-x-4">
@@ -60,6 +62,7 @@
                     <li><a href="#overview" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">🚀 Overview</a></li>
                     <li><a href="#endpoint" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">🛰️ Geocoding API</a></li>
                     <li><a href="#payloads" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">📦 Response Payloads</a></li>
+                    <li><a href="#integration-flow" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">🔄 Integration Flow</a></li>
                     <li><a href="#database" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">🗄️ Database Mapping</a></li>
                     <li><a href="#reference-api" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">📂 Reference Data API</a></li>
                     <li><a href="#snippets" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">💻 Client Snippets</a></li>
@@ -198,12 +201,73 @@
 
                 <hr class="border-gray-200">
 
+                <!-- Section: Integration Flow -->
+                <section id="integration-flow" class="scroll-mt-20">
+                    <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-3">🔄 Developer Integration Flow</h2>
+                    <p class="text-gray-600 mb-6">Understand how to integrate Kettu Geo-Data API into your infrastructure and completely automate data syncing. The entire pipeline consists of 4 direct phases:</p>
+
+                    <div class="space-y-6 relative border-l-2 border-gray-100 ml-4 pl-6">
+                        <!-- Step 1 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">1</span>
+                            <h3 class="text-base font-semibold text-gray-900 mb-1">Frontend: Capture Geographical Coordinates</h3>
+                            <p class="text-sm text-gray-600 mb-2">When a user places a pin or clicks on the client map interface, the Map SDK (Google Maps, Mapbox, Leaflet) returns the exact geographical coordinate pair:</p>
+                            <div class="bg-gray-50 p-2.5 rounded border border-gray-100 font-mono text-xs text-gray-700 w-fit">
+                                latitude: 41.182104, longitude: 70.709864
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">2</span>
+                            <h3 class="text-base font-semibold text-gray-900 mb-1">Request: Forward Coordinates to Kettu API</h3>
+                            <p class="text-sm text-gray-600 mb-2">Your backend server targets Kettu's lightweight <code class="bg-gray-100 px-1 py-0.5 rounded font-mono text-xs">/reverse</code> endpoint, appending the coordinate properties as safe query params:</p>
+                            <div class="bg-gray-50 p-2.5 rounded border border-gray-100 font-mono text-xs text-gray-700 w-fit">
+                                <span class="text-green-700 font-bold">GET</span> https://thekettu.com/api/geo-service/reverse?lat=41.182104&long=70.709864
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">3</span>
+                            <h3 class="text-base font-semibold text-gray-900 mb-1">Response: Ingest the Immutable Natural Key (Slug)</h3>
+                            <p class="text-sm text-gray-600 mb-2">Kettu handles the complex PostGIS multi-polygon calculations and maps the point to an immutable natural text string within milliseconds. No fragile string parsing or regex filtering needed:</p>
+                            <div class="bg-gray-50 p-2.5 rounded border border-gray-100 font-mono text-xs text-gray-700 w-fit">
+                                region.slug ➡️ "namangan" | district.slug ➡️ "pap"
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">4</span>
+                            <h3 class="text-base font-semibold text-gray-900 mb-1">Database Match: Bind Relational Database Tables</h3>
+                            <p class="text-sm text-gray-600">Query your internal region and district tables matching the incoming <code class="bg-gray-100 px-1 py-0.5 rounded font-mono text-xs">slug</code> string. Extract your local primary relational IDs, save the transaction entity, and execute your logic seamlessly.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-gray-200">
+
                 <!-- Section: Database Architectural Integration -->
                 <section id="database" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">🗄️ Database Architectural Integration</h2>
-                    <p class="text-gray-600 mb-4">
-                        Because the API returns a predictable, immutable <code class="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm">slug</code> natural key instead of variable text blocks, updating relationship links within SQL engines like PostgreSQL or MySQL is safe and fast:
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Kettu API does not return internal primary numerical IDs because every individual enterprise database enforces its own isolated sequencing and auto-increment strategies. Instead, the ozo-yengil **`slug`** property acts as our system contract. To integrate smoothly, your application's target tables must contain a dedicated `slug` column configured with a unique index:
                     </p>
+                    <pre class="rounded-lg shadow-sm"><code class="language-sql">-- Enforce a unique index on your slug string columns for instant record matches:
+CREATE TABLE enterprise_districts (
+    id SERIAL PRIMARY KEY,
+    slug VARCHAR(50) UNIQUE NOT NULL, -- The unique natural key matching Kettu responses 🔑
+    name_uz VARCHAR(100),
+    region_id INT
+);
+
+CREATE UNIQUE INDEX idx_districts_slug ON enterprise_districts(slug);</code></pre>
+                    
+                    <p class="text-gray-600 my-4">
+                        Mapping an incoming Kettu slug (e.g., `pap` or `chilanzar`) into your operational relational entity tables is achieved cleanly with a standard sub-query statement:
+                    </p>
+
                     <pre class="rounded-lg shadow-sm"><code class="language-sql">-- Direct relational foreign key linking without string manipulation or substring trimming
 UPDATE app_users_profile 
 SET localized_district_id = (SELECT id FROM enterprise_districts WHERE slug = :kettu_returned_slug)
@@ -310,7 +374,7 @@ WHERE user_session_id = :active_user_id;</code></pre>
 
 async function resolveUserSpatialPoint() {
   try {
-    const response = await axios.get('https://thekettu.com/api/geo-data', {
+    const response = await axios.get('https://thekettu.com/api/geo-service/reverse', {
       params: { lat: 41.182104, long: 70.709864 },
       headers: { 'Accept-Language': 'uz' }
     });
@@ -331,7 +395,7 @@ import java.util.Map;
 
 public class SpatialResolver {
     public Map&lt;String, Object&gt; getGeoData(double lat, double lon) {
-        String url = "https://thekettu.com/api/geo-data?lat={lat}&long={long}";
+        String url = "https://thekettu.com/api/geo-service/reverse?lat={lat}&long={long}";
         RestTemplate restTemplate = new RestTemplate();
         
         HttpHeaders headers = new HttpHeaders();
@@ -362,7 +426,7 @@ public class SpatialResolver {
                                 <span class="mr-2.5">💛</span> Support Kettu Platform
                             </h2>
                             <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                                Ushbu loyihani qo'llab-quvvatlash uchun yuborilgan mablag'larning asosiy qismi to'g'ridan-to'g'ri API'ning yuqori tezlikda (<em class="text-amber-300 not-italic font-medium">performance</em>) ishlashi va serverlar barqarorligi (<em class="text-amber-300 not-italic font-medium">stability</em>) uchun sarflansa, kichik bir qismi mening tunlarni bedor o'tkazib yangi "Open Source" loyihalar qilishdan to'xtamasligim uchun yordam beradigan kofe, salqin ichimliklar (motivatsiya) zaxirasiga yo'naltiriladi. Men uchun har bir tiyinning qayerga sarflanishini ochiq va shaffof aytish — halollik nuqtai nazaridan juda muhim! Birgalikda foydali loyihalarni ko'paytiramiz! 🚀
+                                While the vast majority of funds contributed to support this project are directed straight toward maintaining high API performance (<em class="text-amber-300 not-italic font-medium">performance</em>) and server stability (<em class="text-amber-300 not-italic font-medium">stability</em>), a minor portion goes into keeping my coffee and refreshments stash stocked. Because absolute honesty is deeply important to me, I want to be entirely transparent: this directly helps fuel the late-night coding sessions required to keep building open-source platforms for the community. Let's grow impactful local developer utilities together! 🚀
                             </p>
 
                             <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
@@ -384,7 +448,7 @@ public class SpatialResolver {
                                 <!-- Alternative Telegram Action -->
                                 <div class="md:col-span-2 flex flex-col justify-center h-full space-y-2 text-center md:text-left">
                                     <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Custom Integration?</h4>
-                                    <p class="text-xs text-gray-400 leading-normal">Katta hajmdagi enterprise so'rovlar yoki PostGIS bazasini to'liq yuklab olish bo'yicha takliflar bo'lsa, to'g'ridan-to'g'ri bog'lanishingiz mumkin.</p>
+                                    <p class="text-xs text-gray-400 leading-normal">For large enterprise request setups or inquiries regarding direct PostGIS batch table downloads, feel free to contact me directly.</p>
                                     <a href="https://t.me/khorunaliyev" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-gray-800 hover:bg-gray-700 transition border border-gray-700 mt-2">
                                         Discuss via Telegram
                                     </a>
