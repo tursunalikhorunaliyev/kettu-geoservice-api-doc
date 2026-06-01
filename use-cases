@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kettu Geo-Data API - Enterprise Use Cases</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm backdrop-blur-md bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🦊</span>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Kettu <span class="text-orange-600">Geo-Data API</span></span>
+                </div>
+                
+                <div class="hidden lg:flex space-x-6 text-sm font-medium text-gray-600">
+                    <a href="index.html#overview" class="hover:text-orange-600 transition">Overview</a>
+                    <a href="index.html#endpoint" class="hover:text-orange-600 transition">Geocoding API</a>
+                    <a href="index.html#integration-flow" class="hover:text-orange-600 transition">Integration Flow</a>
+                    <a href="index.html#database" class="hover:text-orange-600 transition">Database</a>
+                    <a href="use-cases.html" class="text-orange-600 font-semibold transition">Enterprise Use Cases 🚀</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://t.me/khorunaliyev" target="_blank" class="inline-flex items-center justify-center px-4 py-1.5 text-sm font-bold rounded-lg shadow-sm text-white bg-[#24A1DE] hover:bg-[#2092c9] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#24A1DE]">
+                        <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.88 1.19-5.31 3.52-.5.34-.95.51-1.35.5-.44-.01-1.28-.24-1.9-.44-.77-.24-1.38-.37-1.33-.79.03-.22.33-.45.92-.69 3.58-1.56 5.96-2.59 7.14-3.1 3.4-1.42 4.1-1.67 4.56-1.67.1 0 .33.02.48.15.13.12.17.28.18.41z"/>
+                        </svg>
+                        Contact Developer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl mb-4">
+                Enterprise <span class="text-orange-600">Use Cases</span> & Solutions
+            </h1>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Discover how top industries leverage Kettu Geo-Data API to bypass complex spatial configurations, enhance application UX, and protect relational data integrity.
+            </p>
+        </div>
+
+        <div class="space-y-12">
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm transition hover:shadow-md">
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="text-3xl">🍔</span>
+                    <span class="bg-orange-50 text-orange-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">Logistics & Mobility</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Eliminating the "Dual-Input Paradox" in Delivery & Ride-Hailing</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt-4">
+                    <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                        <strong class="text-red-800 font-semibold block mb-1">The Friction (Traditional Way):</strong>
+                        Users select their precise house pin on a map, but the interface forces them to pick their province/district from dropdown lists. Due to human error, a user might drop a pin in <code class="bg-white px-1 rounded">Chilanzar</code> but select <code class="bg-white px-1 rounded">Yunusabad</code> from the list. This creates conflicting database properties, causing taxi dispatches or food orders to route to completely wrong branches.
+                    </div>
+                    <div class="bg-green-50/50 p-4 rounded-xl border border-green-100">
+                        <strong class="text-green-800 font-semibold block mb-1">The Kettu Solution (Automatic UX):</strong>
+                        Dropdown menus are completely purged from the address selection flow. The client performs exactly one seamless action—dropping a map pin. Your server passes those background coordinates to Kettu. Within milliseconds, Kettu returns the immutable natural key (<code class="bg-white px-1 rounded font-mono text-xs">"chilanzar"</code>), auto-assigning the transaction to the perfect local branch with zero human mistakes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm transition hover:shadow-md">
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="text-3xl">🏦</span>
+                    <span class="bg-blue-50 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">FinTech & Banking</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Fraud Prevention and Location Verification in Credit Scoring</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt-4">
+                    <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                        <strong class="text-red-800 font-semibold block mb-1">The Friction (Traditional Way):</strong>
+                        When applying for instant micro-loans or BNPL (Buy Now Pay Later) services, risk mitigation algorithms calculate geographical credit scores (as certain areas display higher non-performing loan indexes). Fraudulent users often manipulate inputs, picking low-risk dropdown locations (e.g., Tashkent Center) while residing elsewhere to skew the scoring metric.
+                    </div>
+                    <div class="bg-green-50/50 p-4 rounded-xl border border-green-100">
+                        <strong class="text-green-800 font-semibold block mb-1">The Kettu Solution (Automatic UX):</strong>
+                        The microservice automatically grabs the device's true background GPS telemetry and resolves it against Kettu. Kettu responds with the absolute district slug (e.g., <code class="bg-white px-1 rounded font-mono text-xs">"shofirkon"</code>). If Kettu's resolved location conflicts with the user's declared profile fields, the application flags it as a high-risk location anomaly, automatically blocking fraud attempts.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm transition hover:shadow-md">
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="text-3xl">🏢</span>
+                    <span class="bg-purple-50 text-purple-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">E-Commerce & Classifieds</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Frictionless Listing Creation for Real Estate & Classified Ads</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt-4">
+                    <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                        <strong class="text-red-800 font-semibold block mb-1">The Friction (Traditional Way):</strong>
+                        Listing a property or item for sale requires completing tedious multi-step submission wizards. Forcing sellers to scroll through nested administrative selects to declare their city, region, and district slows down the listing funnel, causing high user drop-off rates before submission completion.
+                    </div>
+                    <div class="bg-green-50/50 p-4 rounded-xl border border-green-100">
+                        <strong class="text-green-800 font-semibold block mb-1">The Kettu Solution (Automatic UX):</strong>
+                        Sellers simply choose their property location via a visual map container. Behind the scenes, Kettu instantly determines the matching sub-administrative administrative data (<code class="bg-white px-1 rounded font-mono text-xs">"fergana"</code> and <code class="bg-white px-1 rounded font-mono text-xs">"danghara"</code>). The platform maps the asset to correct search filter tags automatically, delivering clean data for searchers with zero friction for creators.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm transition hover:shadow-md">
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="text-3xl">🎯</span>
+                    <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">Marketing Technology</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">4. Lightweight Targeted Push-Notification Pipelines</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt-4">
+                    <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                        <strong class="text-red-800 font-semibold block mb-1">The Friction (Traditional Way):</strong>
+                        A large retail chain wants to launch an exclusive flash-sale push notification targeting only users currently within a specific neighborhood. Running real-time spatial intersection database operations across millions of roaming user rows crashes standard relational databases, while commercial map APIs charge thousands of dollars for mass geocoding lookups.
+                    </div>
+                    <div class="bg-green-50/50 p-4 rounded-xl border border-green-100">
+                        <strong class="text-green-800 font-semibold block mb-1">The Kettu Solution (Automatic UX):</strong>
+                        As background user coordinates occasionally refresh, they hit Kettu's highly cached endpoints to maintain a simple string column: <code class="bg-white px-1 rounded text-xs font-mono">current_district_slug = 'chilanzar'</code>. When marketing fires a campaign, instead of expensive polygon operations, they run a trivial, lightning-fast SQL fetch: <code class="bg-white px-1 rounded text-xs font-mono">WHERE current_district_slug = 'chilanzar'</code>, deploying targeted push messages safely and for free.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-16 text-center bg-gray-100 rounded-xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Ready to Implement Kettu API?</h3>
+            <p class="text-sm text-gray-600 mb-4 max-w-xl mx-auto">Hop back over to our core technical specifications page to view endpoint setups, database table mapping structures, and copy-paste client code snippets.</p>
+            <a href="index.html" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg text-white bg-orange-600 hover:bg-orange-700 transition">
+                ← Back to Technical Documentation
+            </a>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 mt-20 py-8 text-center text-sm text-gray-500">
+        <p>Built with ❤️ for developers by developers.</p>
+        <p class="mt-2 text-gray-400">
+            Want to support or need custom data integration? 
+            <a href="https://t.me/khorunaliyev" target="_blank" class="text-[#24A1DE] hover:underline font-semibold">Contact me on Telegram ✈️</a>
+        </p>
+        <p class="mt-4 font-semibold text-gray-700">&copy; 2026 Kettu Geospatial Open Platform. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
