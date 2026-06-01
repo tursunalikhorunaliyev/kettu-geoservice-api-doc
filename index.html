@@ -80,7 +80,7 @@
                         <strong>Kettu Geo-Data API</strong> solves this entirely. By matching client coordinates against precise spatial database <code class="bg-gray-100 text-orange-600 px-1.5 py-0.5 rounded text-sm">MultiPolygon</code> grids via PostGIS spatial indexes, it directly outputs a clean, immutable <strong>Universal Slug</strong> (e.g., <code class="font-semibold text-gray-800">pap</code>, <code class="font-semibold text-gray-800">besharyk</code>, <code class="font-semibold text-gray-800">sukh</code>). This serves as a plug-and-play <strong>Natural Key</strong> for your database tables, completely bypassing expensive API pricing and vendor lock-in.
                     </p>
                     <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-blue-800 text-sm">
-                        <strong class="font-semibold">Production Base URL:</strong> <code class="bg-white px-2 py-0.5 rounded shadow-sm text-blue-600 font-mono">https://thekettu.com/api</code>
+                        <strong class="font-semibold">Production Base URL:</strong> <code class="bg-white px-2 py-0.5 rounded shadow-sm text-blue-600 font-mono">https://thekettu.com/api/geo-service</code>
                     </div>
                 </section>
 
@@ -93,7 +93,7 @@
                     
                     <div class="flex items-center space-x-3 mb-6">
                         <span class="bg-green-600 text-white font-bold px-3 py-1 rounded text-sm tracking-wide">GET</span>
-                        <code class="text-gray-800 font-mono text-base font-semibold">/geo-data</code>
+                        <code class="text-gray-800 font-mono text-base font-semibold">/reverse</code>
                     </div>
 
                     <h3 class="text-lg font-semibold text-gray-900 mb-3">1. Request Query Parameters</h3>
