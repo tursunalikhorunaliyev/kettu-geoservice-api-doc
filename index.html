@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kettu Geo-Data API Documentation</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Highlight.js for Beautiful Code Blocks -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -14,6 +16,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
+    <!-- Top Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm backdrop-blur-md bg-opacity-90">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -21,25 +24,36 @@
                     <span class="text-2xl">🦊</span>
                     <span class="font-bold text-xl tracking-tight text-gray-900">Kettu <span class="text-orange-600">Geo-Data API</span></span>
                 </div>
-                <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                
+                <div class="hidden lg:flex space-x-6 text-sm font-medium text-gray-600">
                     <a href="#overview" class="hover:text-orange-600 transition">Overview</a>
                     <a href="#endpoint" class="hover:text-orange-600 transition">Geocoding API</a>
                     <a href="#reference-api" class="hover:text-orange-600 transition">Reference API</a>
                     <a href="#database" class="hover:text-orange-600 transition">Database</a>
                     <a href="#snippets" class="hover:text-orange-600 transition">Code</a>
                 </div>
-                <div>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 animate-pulse">
-                        v1.0.0 Stable
+
+                <div class="flex items-center space-x-4">
+                    <!-- Telegram Contact Button -->
+                    <a href="https://t.me/khorunaliyev" target="_blank" class="inline-flex items-center justify-center px-4 py-1.5 text-sm font-bold rounded-lg shadow-sm text-white bg-[#24A1DE] hover:bg-[#2092c9] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#24A1DE]">
+                        <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.88 1.19-5.31 3.52-.5.34-.95.51-1.35.5-.44-.01-1.28-.24-1.9-.44-.77-.24-1.38-.37-1.33-.79.03-.22.33-.45.92-.69 3.58-1.56 5.96-2.59 7.14-3.1 3.4-1.42 4.1-1.67 4.56-1.67.1 0 .33.02.48.15.13.12.17.28.18.41z"/>
+                        </svg>
+                        Contact Developer
+                    </a>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">
+                        v1.0.0
                     </span>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Main Layout Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
+            <!-- Left Sidebar Navigation -->
             <aside class="hidden lg:block lg:col-span-1 sticky top-24 h-fit bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                 <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Documentation</h3>
                 <ul class="space-y-3 text-sm font-medium text-gray-600">
@@ -49,11 +63,14 @@
                     <li><a href="#database" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">🗄️ Database Mapping</a></li>
                     <li><a href="#reference-api" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">📂 Reference Data API</a></li>
                     <li><a href="#snippets" class="block hover:text-orange-600 py-1 transition border-l-2 border-transparent hover:border-orange-500 pl-3">💻 Client Snippets</a></li>
+                    <li class="pt-2 border-t border-gray-100"><a href="#support" class="block text-amber-600 hover:text-amber-700 py-1 transition border-l-2 border-transparent hover:border-amber-500 pl-3 font-semibold">💛 Support Project</a></li>
                 </ul>
             </aside>
 
+            <!-- Main Documentation Content -->
             <main class="col-span-1 lg:col-span-3 space-y-12 bg-white p-6 sm:p-10 rounded-xl border border-gray-200 shadow-sm">
                 
+                <!-- Section: Overview -->
                 <section id="overview" class="scroll-mt-20">
                     <h2 class="text-3xl font-bold text-gray-900 tracking-tight mb-4">🚀 Project Overview</h2>
                     <p class="text-gray-600 leading-relaxed mb-4">
@@ -69,6 +86,7 @@
 
                 <hr class="border-gray-200">
 
+                <!-- Section: API Architecture -->
                 <section id="endpoint" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">🛰️ Geocoding API Specifications</h2>
                     <p class="text-gray-600 mb-6">Trigger a spatial intersection query from your mobile applications or server-side microservices instantly.</p>
@@ -129,11 +147,13 @@
 
                 <hr class="border-gray-200">
 
+                <!-- Section: JSON Response Payloads -->
                 <section id="payloads" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">📦 JSON Response Payloads</h2>
                     <p class="text-gray-600 mb-6">The system enforces a rigid, predictable response block optimized for real-time relational parsing:</p>
 
                     <div class="space-y-6">
+                        <!-- Success Example -->
                         <div class="border border-green-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-green-50 px-4 py-3 border-b border-green-200 text-green-800 font-semibold text-sm">
                                 🟢 200 OK — Point Inside Boundary Successfully Found
@@ -161,6 +181,7 @@
                             </div>
                         </div>
 
+                        <!-- Error Example -->
                         <div class="border border-red-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-red-50 px-4 py-3 border-b border-red-200 text-red-800 font-semibold text-sm">
                                 🔴 404 Not Found — Point Out of Bounds / Spatial Miss
@@ -177,6 +198,7 @@
 
                 <hr class="border-gray-200">
 
+                <!-- Section: Database Architectural Integration -->
                 <section id="database" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">🗄️ Database Architectural Integration</h2>
                     <p class="text-gray-600 mb-4">
@@ -190,12 +212,14 @@ WHERE user_session_id = :active_user_id;</code></pre>
 
                 <hr class="border-gray-200">
 
+                <!-- Section: Reference Data API -->
                 <section id="reference-api" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">📂 Reference Data API</h2>
                     <p class="text-gray-600 mb-6">To seed your local databases or build dropdown menus in your UI, you can dynamically fetch all supported region and district slugs. These endpoints are heavily cached for ultra-fast response times.</p>
                     
                     <div class="space-y-8">
                         
+                        <!-- Get All Regions -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center space-x-3">
                                 <span class="bg-blue-600 text-white font-bold px-3 py-1 rounded text-sm tracking-wide">GET</span>
@@ -227,6 +251,7 @@ WHERE user_session_id = :active_user_id;</code></pre>
                             </div>
                         </div>
 
+                        <!-- Get Districts by Region -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center space-x-3">
                                 <span class="bg-blue-600 text-white font-bold px-3 py-1 rounded text-sm tracking-wide">GET</span>
@@ -273,6 +298,7 @@ WHERE user_session_id = :active_user_id;</code></pre>
 
                 <hr class="border-gray-200">
 
+                <!-- Section: Client Integration Snippets -->
                 <section id="snippets" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">💻 Zero-Configuration Client Integration</h2>
                     <p class="text-gray-600 mb-6">Clean integration templates for multiple runtime applications.</p>
@@ -324,13 +350,62 @@ public class SpatialResolver {
                     </div>
                 </section>
 
+                <hr class="border-gray-200">
+
+                <!-- Section: Support & Donation -->
+                <section id="support" class="scroll-mt-20">
+                    <div class="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 rounded-2xl p-6 sm:p-8 text-white shadow-md relative overflow-hidden border border-gray-800">
+                        <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-orange-600 opacity-5 blur-3xl"></div>
+                        
+                        <div class="relative z-10 max-w-3xl">
+                            <h2 class="text-2xl font-bold tracking-tight mb-3 flex items-center text-amber-400">
+                                <span class="mr-2.5">💛</span> Support Kettu Platform
+                            </h2>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                                Ushbu loyihani qo'llab-quvvatlash uchun yuborilgan mablag'larning asosiy qismi to'g'ridan-to'g'ri API'ning yuqori tezlikda (<em class="text-amber-300 not-italic font-medium">performance</em>) ishlashi va serverlar barqarorligi (<em class="text-amber-300 not-italic font-medium">stability</em>) uchun sarflansa, kichik bir qismi mening tunlarni bedor o'tkazib yangi "Open Source" loyihalar qilishdan to'xtamasligim uchun yordam beradigan kofe, salqin ichimliklar (motivatsiya) zaxirasiga yo'naltiriladi. Men uchun har bir tiyinning qayerga sarflanishini ochiq va shaffof aytish — halollik nuqtai nazaridan juda muhim! Birgalikda foydali loyihalarni ko'paytiramiz! 🚀
+                            </p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+                                <!-- HUMO Card Widget -->
+                                <div class="md:col-span-3 bg-gradient-to-r from-orange-500 to-amber-600 rounded-xl p-5 shadow-lg border border-orange-400/20 text-white font-mono flex flex-col justify-between h-36">
+                                    <div class="flex justify-between items-start">
+                                        <span class="text-xs font-sans font-bold tracking-wide uppercase opacity-90">Kettu API Support</span>
+                                        <span class="text-sm font-sans font-black italic tracking-wider">HUMO</span>
+                                    </div>
+                                    <div class="text-xl sm:text-2xl tracking-widest font-semibold my-2 select-all">
+                                        9860 0000 0000 0000
+                                    </div>
+                                    <div class="flex justify-between items-center text-[10px] font-sans opacity-80 uppercase tracking-wider">
+                                        <span>Cardholder: Tursunali KH.</span>
+                                        <span>UZB Only</span>
+                                    </div>
+                                </div>
+
+                                <!-- Alternative Telegram Action -->
+                                <div class="md:col-span-2 flex flex-col justify-center h-full space-y-2 text-center md:text-left">
+                                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Custom Integration?</h4>
+                                    <p class="text-xs text-gray-400 leading-normal">Katta hajmdagi enterprise so'rovlar yoki PostGIS bazasini to'liq yuklab olish bo'yicha takliflar bo'lsa, to'g'ridan-to'g'ri bog'lanishingiz mumkin.</p>
+                                    <a href="https://t.me/khorunaliyev" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-gray-800 hover:bg-gray-700 transition border border-gray-700 mt-2">
+                                        Discuss via Telegram
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </main>
         </div>
     </div>
 
+    <!-- Simple Corporate Footer -->
     <footer class="bg-white border-t border-gray-200 mt-20 py-8 text-center text-sm text-gray-500">
         <p>Built with ❤️ for developers by developers.</p>
-        <p class="mt-1 font-semibold text-gray-700">&copy; 2026 Kettu Geospatial Open Platform. All rights reserved.</p>
+        <p class="mt-2 text-gray-400">
+            Want to support or need custom data integration? 
+            <a href="https://t.me/khorunaliyev" target="_blank" class="text-[#24A1DE] hover:underline font-semibold">Contact me on Telegram ✈️</a>
+        </p>
+        <p class="mt-4 font-semibold text-gray-700">&copy; 2026 Kettu Geospatial Open Platform. All rights reserved.</p>
     </footer>
 
 </body>
