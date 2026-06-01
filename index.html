@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags -->
     <title>Kettu Geo-Data API Documentation</title>
     <meta name="title" content="The Automatic Spatial Bridge for Uzbekistan">
     <meta name="description" content="Kettu Geo-Service API – The Automatic Spatial Bridge for Uzbekistan. Instant Coordinate-to-Slug via PostGIS. 100% Data Integrity. Pure Natural Keys. Version 1.0.0 Stable.">
 
-    <!-- Open Graph / Facebook / LinkedIn / Telegram -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://geoservice.thekettu.com">
     <meta property="og:title" content="Kettu Geo-Service API - Spatial Bridge for Uzbekistan">
@@ -17,26 +15,26 @@
     <meta property="og:image" content="https://storage.thekettu.com/geoservice.png">
     <meta property="og:site_name" content="Kettu Dev Services">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@KettuDev">
     <meta name="twitter:title" content="Kettu Geo-Service API - Spatial Bridge for Uzbekistan">
     <meta name="twitter:description" content="Kettu Geo-Service API. Instant Coordinate-to-Slug via PostGIS. 100% Data Integrity. Pure Natural Keys. v1.0.0 Stable.">
     <meta name="twitter:image" content="https://storage.thekettu.com/geoservice.png">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Highlight.js for Beautiful Code Blocks -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <style>
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+            /* Haqiqiy karta raqami bor ushbu fayl kontentini 20% ga kattalashtiramiz */
+            zoom: 120%; 
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-    <!-- Top Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm backdrop-blur-md bg-opacity-90">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -55,7 +53,6 @@
                 </div>
 
                 <div class="flex items-center space-x-4">
-                    <!-- Telegram Contact Button -->
                     <a href="https://t.me/khorunaliyev" target="_blank" class="inline-flex items-center justify-center px-4 py-1.5 text-sm font-bold rounded-lg shadow-sm text-white bg-[#24A1DE] hover:bg-[#2092c9] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#24A1DE]">
                         <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.88 1.19-5.31 3.52-.5.34-.95.51-1.35.5-.44-.01-1.28-.24-1.9-.44-.77-.24-1.38-.37-1.33-.79.03-.22.33-.45.92-.69 3.58-1.56 5.96-2.59 7.14-3.1 3.4-1.42 4.1-1.67 4.56-1.67.1 0 .33.02.48.15.13.12.17.28.18.41z"/>
@@ -70,11 +67,9 @@
         </div>
     </nav>
 
-    <!-- Main Layout Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
-            <!-- Left Sidebar Navigation -->
             <aside class="hidden lg:block lg:col-span-1 sticky top-24 h-fit bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                 <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Documentation</h3>
                 <ul class="space-y-3 text-sm font-medium text-gray-600">
@@ -89,10 +84,8 @@
                 </ul>
             </aside>
 
-            <!-- Main Documentation Content -->
             <main class="col-span-1 lg:col-span-3 space-y-12 bg-white p-6 sm:p-10 rounded-xl border border-gray-200 shadow-sm">
                 
-                <!-- Section: Overview -->
                 <section id="overview" class="scroll-mt-20">
                     <h2 class="text-3xl font-bold text-gray-900 tracking-tight mb-4">🚀 Project Overview</h2>
                     <p class="text-gray-600 leading-relaxed mb-4">
@@ -108,7 +101,6 @@
 
                 <hr class="border-gray-200">
 
-                <!-- Section: API Architecture -->
                 <section id="endpoint" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">🛰️ Geocoding API Specifications</h2>
                     <p class="text-gray-600 mb-6">Trigger a spatial intersection query from your mobile applications or server-side microservices instantly.</p>
@@ -169,13 +161,11 @@
 
                 <hr class="border-gray-200">
 
-                <!-- Section: JSON Response Payloads -->
                 <section id="payloads" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">📦 JSON Response Payloads</h2>
                     <p class="text-gray-600 mb-6">The system enforces a rigid, predictable response block optimized for real-time relational parsing:</p>
 
                     <div class="space-y-6">
-                        <!-- Success Example -->
                         <div class="border border-green-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-green-50 px-4 py-3 border-b border-green-200 text-green-800 font-semibold text-sm">
                                 🟢 200 OK — Point Inside Boundary Successfully Found
@@ -203,7 +193,6 @@
                             </div>
                         </div>
 
-                        <!-- Error Example -->
                         <div class="border border-red-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-red-50 px-4 py-3 border-b border-red-200 text-red-800 font-semibold text-sm">
                                 🔴 404 Not Found — Point Out of Bounds / Spatial Miss
@@ -220,13 +209,11 @@
 
                 <hr class="border-gray-200">
 
-                <!-- Section: Integration Flow -->
                 <section id="integration-flow" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-3">🔄 Developer Integration Flow</h2>
                     <p class="text-gray-600 mb-6">Understand how to integrate Kettu Geo-Data API into your infrastructure and completely automate data syncing. The entire pipeline consists of 4 direct phases:</p>
 
                     <div class="space-y-6 relative border-l-2 border-gray-100 ml-4 pl-6">
-                        <!-- Step 1 -->
                         <div class="relative">
                             <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">1</span>
                             <h3 class="text-base font-semibold text-gray-900 mb-1">Frontend: Capture Geographical Coordinates</h3>
@@ -236,7 +223,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 2 -->
                         <div class="relative">
                             <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">2</span>
                             <h3 class="text-base font-semibold text-gray-900 mb-1">Request: Forward Coordinates to Kettu API</h3>
@@ -246,7 +232,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 3 -->
                         <div class="relative">
                             <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">3</span>
                             <h3 class="text-base font-semibold text-gray-900 mb-1">Response: Ingest the Immutable Natural Key (Slug)</h3>
@@ -256,7 +241,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 4 -->
                         <div class="relative">
                             <span class="absolute -left-[31px] top-0 bg-green-600 text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold shadow-sm">4</span>
                             <h3 class="text-base font-semibold text-gray-900 mb-1">Database Match: Bind Relational Database Tables</h3>
@@ -267,7 +251,6 @@
 
                 <hr class="border-gray-200">
 
-                <!-- Section: Database Architectural Integration -->
                 <section id="database" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">🗄️ Database Architectural Integration</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
@@ -295,14 +278,12 @@ WHERE user_session_id = :active_user_id;</code></pre>
 
                 <hr class="border-gray-200">
 
-                <!-- Section: Reference Data API -->
                 <section id="reference-api" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">📂 Reference Data API</h2>
                     <p class="text-gray-600 mb-6">To seed your local databases or build dropdown menus in your UI, you can dynamically fetch all supported region and district slugs. These endpoints are heavily cached for ultra-fast response times.</p>
                     
                     <div class="space-y-8">
                         
-                        <!-- Get All Regions -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center space-x-3">
                                 <span class="bg-blue-600 text-white font-bold px-3 py-1 rounded text-sm tracking-wide">GET</span>
@@ -334,7 +315,6 @@ WHERE user_session_id = :active_user_id;</code></pre>
                             </div>
                         </div>
 
-                        <!-- Get Districts by Region -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                             <div class="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center space-x-3">
                                 <span class="bg-blue-600 text-white font-bold px-3 py-1 rounded text-sm tracking-wide">GET</span>
@@ -379,9 +359,6 @@ WHERE user_session_id = :active_user_id;</code></pre>
                     </div>
                 </section>
 
-                <hr class="border-gray-200">
-
-                <!-- Section: Client Integration Snippets -->
                 <section id="snippets" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold text-gray-900 tracking-tight mb-4">💻 Zero-Configuration Client Integration</h2>
                     <p class="text-gray-600 mb-6">Clean integration templates for multiple runtime applications.</p>
@@ -435,7 +412,6 @@ public class SpatialResolver {
 
                 <hr class="border-gray-200">
 
-                <!-- Section: Support & Donation -->
                 <section id="support" class="scroll-mt-20">
                     <div class="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 rounded-2xl p-6 sm:p-8 text-white shadow-md relative overflow-hidden border border-gray-800">
                         <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-orange-600 opacity-5 blur-3xl"></div>
@@ -449,7 +425,6 @@ public class SpatialResolver {
                             </p>
 
                             <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
-                                <!-- HUMO Card Widget -->
                                 <div class="md:col-span-3 bg-gradient-to-r from-orange-500 to-amber-600 rounded-xl p-5 shadow-lg border border-orange-400/20 text-white font-mono flex flex-col justify-between h-36">
                                     <div class="flex justify-between items-start">
                                         <span class="text-xs font-sans font-bold tracking-wide uppercase opacity-90">Kettu API Support</span>
@@ -464,7 +439,6 @@ public class SpatialResolver {
                                     </div>
                                 </div>
 
-                                <!-- Alternative Telegram Action -->
                                 <div class="md:col-span-2 flex flex-col justify-center h-full space-y-2 text-center md:text-left">
                                     <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Custom Integration?</h4>
                                     <p class="text-xs text-gray-400 leading-normal">For large enterprise request setups or inquiries regarding direct PostGIS batch table downloads, feel free to contact me directly.</p>
@@ -481,7 +455,6 @@ public class SpatialResolver {
         </div>
     </div>
 
-    <!-- Simple Corporate Footer -->
     <footer class="bg-white border-t border-gray-200 mt-20 py-8 text-center text-sm text-gray-500">
         <p>Built with ❤️ for developers by developers.</p>
         <p class="mt-2 text-gray-400">
